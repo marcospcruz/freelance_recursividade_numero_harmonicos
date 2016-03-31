@@ -1,5 +1,3 @@
-package freelance_recursividade_numero_harmonicos;
-
 /**
  * Execução: java NumeroHarmonico <número inteiro>
  * 
@@ -16,7 +14,7 @@ public class NumeroHarmonico {
 					args[0]));
 
 			System.out.println("Numero harmonico: " + i);
-		
+
 		} catch (Exception e) {
 			System.out
 					.println("Erro!\nExemplo: \"java NumeroHarmonico <número inteiro>\"");
