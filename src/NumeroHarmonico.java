@@ -1,4 +1,7 @@
 /**
+ * Resultados comparados com o site
+ * http://www.math.utah.edu/~carlson/teaching/calculus/harmonic.html
+ * 
  * Execução: java NumeroHarmonico <número inteiro>
  * 
  * @author
@@ -10,31 +13,34 @@ public class NumeroHarmonico {
 
 		try {
 
-			double i = new NumeroHarmonico().calculaNumeroHarmonico(new Double(
-					args[0]));
+			double hn = new NumeroHarmonico().calculaNumeroHarmonico(Double
+					.parseDouble(args[0]));
 
-			System.out.println("Numero harmonico: " + i);
+			System.out.println("Numero harmonico para o numero natural"
+					+ args[0] + ": " + hn);
 
 		} catch (Exception e) {
 			System.out
-					.println("Erro!\nExemplo: \"java NumeroHarmonico <número inteiro>\"");
+					.println("Erro!\nExemplo: \"java NumeroHarmonico <numero inteiro>\"");
 		}
 
 	}
 
 	/**
+	 * Função responsável por calcular o número harmônico de um número natural.
 	 * 
-	 * @param i
+	 * @param numeroNatural
 	 * @return
 	 */
-	private double calculaNumeroHarmonico(double i) {
+	private double calculaNumeroHarmonico(double numeroNatural) {
 
-		if (i == 1.0) {
+		if (numeroNatural == 1.0) {
 			return 1.0;
 
 		} else {
 
-			return (1 / i) + calculaNumeroHarmonico(i - 1);
+			return (1 / numeroNatural)
+					+ calculaNumeroHarmonico(numeroNatural - 1);
 
 		}
 
